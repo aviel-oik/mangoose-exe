@@ -5,6 +5,8 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   role: { type: String, default: "agent" },
   createdAt: { type: Date, default: Date.now }
+},{
+    timestamps: true, // createdAt et updatedAt automatiques
 });
 
 const User = mongoose.model("User", userSchema);
